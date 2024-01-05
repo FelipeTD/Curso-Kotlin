@@ -1,0 +1,26 @@
+Category		Basic types
+Integers		Byte, Short, Int, Long
+Unsigned integers	UByte, UShort, UInt, ULong
+Floating-point numbers	Float, Double
+Booleans		Boolean
+Characters		Char
+Strings			String
+
+With this knowledge, you can declare variables and initialize them later. 
+Kotlin can manage this as long as variables are initialized before the first read.
+
+To declare a variable without initializing it, specify its type with :
+
+fun main() {
+    // Variable declared without initialization
+    val d: Int
+    // Variable initialized
+    d = 3
+
+    // Variable explicitly typed and initialized
+    val e: String = "hello"
+
+    // Variables can be read because they have been initialized
+    println(d) // 3
+    println(e) // hello
+}

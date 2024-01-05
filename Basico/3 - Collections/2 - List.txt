@@ -1,0 +1,101 @@
+Lists store items in the order that they are added, and allow for duplicate items.
+
+To create a read-only list (List), use the listOf() function.
+
+To create a mutable list (MutableList), use the mutableListOf() function.
+
+When creating lists, Kotlin can infer the type of items stored. 
+To declare the type explicitly, add the type within angled brackets <> after the list declaration:
+
+fun main() { 
+    // Read only list
+    val readOnlyShapes = listOf("triangle", "square", "circle")
+    println(readOnlyShapes)
+    // [triangle, square, circle]
+
+    // Mutable list with explicit type declaration
+    val shapes: MutableList<String> = mutableListOf("triangle", "square", "circle")
+    println(shapes)
+    // [triangle, square, circle]
+}
+
+To prevent unwanted modifications, you can obtain read-only views of mutable lists by assigning them to a List:
+
+val shapes: MutableList<String> = mutableListOf("triangle", "square", "circle")
+val shapesLocked: List<String> = shapes
+
+Lists are ordered so to access an item in a list, use the indexed access operator []:
+
+fun main() { 
+    val readOnlyShapes = listOf("triangle", "square", "circle")
+    println("The first item in the list is: ${readOnlyShapes[0]}")
+    // The first item in the list is: triangle
+}
+
+To get the first or last item in a list, use .first() and .last() functions respectively:
+
+fun main() { 
+    val readOnlyShapes = listOf("triangle", "square", "circle")
+    println("The first item in the list is: ${readOnlyShapes.first()}")
+    // The first item in the list is: triangle
+}
+
+.first() and .last() functions are examples of extension functions. 
+To call an extension function on an object, write the function name after the object appended with a period .
+
+For more information about extension functions, see Extension functions. For the purposes of this tour, you only need to know how to call them.
+
+To get the number of items in a list, use the .count() function:
+
+fun main() { 
+    val readOnlyShapes = listOf("triangle", "square", "circle")
+    println("This list has ${readOnlyShapes.count()} items")
+    // This list has 3 items
+}
+
+To check that an item is in a list, use the in operator:
+
+fun main() {
+    val readOnlyShapes = listOf("triangle", "square", "circle")
+    println("circle" in readOnlyShapes)
+    // true
+}
+
+To add or remove items from a mutable list, use .add() and .remove() functions respectively:
+
+fun main() { 
+    val shapes: MutableList<String> = mutableListOf("triangle", "square", "circle")
+    // Add "pentagon" to the list
+    shapes.add("pentagon") 
+    println(shapes)  
+    // [triangle, square, circle, pentagon]
+
+    // Remove the first "pentagon" from the list
+    shapes.remove("pentagon") 
+    println(shapes)  
+    // [triangle, square, circle]
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

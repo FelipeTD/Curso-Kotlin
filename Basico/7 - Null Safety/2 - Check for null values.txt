@@ -1,0 +1,17 @@
+You can check for the presence of null values within conditional expressions. 
+In the following example, the describeString() function has an if statement that checks whether maybeString is not null and if its length is greater than zero:
+
+fun describeString(maybeString: String?): String {
+    if (maybeString != null && maybeString.length > 0) {
+        return "String of length ${maybeString.length}"
+    } else {
+        return "Empty or null string"
+    }
+}
+
+fun main() {
+    var nullString: String? = null
+    println(describeString(nullString))
+    // Empty or null string
+}
+

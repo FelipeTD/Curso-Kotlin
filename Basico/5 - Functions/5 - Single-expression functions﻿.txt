@@ -1,0 +1,23 @@
+To make your code more concise, you can use single-expression functions. For example, the sum() function can be shortened:
+
+fun sum(x: Int, y: Int): Int {
+    return x + y
+}
+
+fun main() {
+    println(sum(1, 2))
+    // 3
+}
+
+You can remove the curly braces {} and declare the function body using the assignment operator =.
+And due to Kotlin's type inference, you can also omit the return type. The sum() function then becomes one line:
+
+fun sum(x: Int, y: Int) = x + y
+
+fun main() {
+    println(sum(1, 2))
+    // 3
+}
+
+Omitting the return type is only possible when your function has no body ({}). Unless your function's return type is Unit.
+

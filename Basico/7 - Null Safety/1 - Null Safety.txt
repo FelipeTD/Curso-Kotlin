@@ -1,0 +1,71 @@
+In Kotlin, it's possible to have a null value. 
+To help prevent issues with null values in your programs, Kotlin has null safety in place. 
+Null safety detects potential problems with null values at compile time, rather than at run time.
+
+Null safety is a combination of features that allow you to:
+
+explicitly declare when null values are allowed in your program.
+
+check for null values.
+
+use safe calls to properties or functions that may contain null values.
+
+declare actions to take if null values are detected.
+
+Nullable types﻿
+Kotlin supports nullable types which allows the possibility for the declared type to have null values. 
+By default, a type is not allowed to accept null values. Nullable types are declared by explicitly adding ? after the type declaration.
+
+For example:
+
+fun main() {
+    // neverNull has String type
+    var neverNull: String = "This can't be null"
+
+    // Throws a compiler error
+    neverNull = null
+
+    // nullable has nullable String type
+    var nullable: String? = "You can keep a null here"
+
+    // This is OK  
+    nullable = null
+
+    // By default, null values aren't accepted
+    var inferredNonNull = "The compiler assumes non-nullable"
+
+    // Throws a compiler error
+    inferredNonNull = null
+
+    // notNull doesn't accept null values
+    fun strLength(notNull: String): Int {                 
+        return notNull.length
+    }
+
+    println(strLength(neverNull)) // 18
+    println(strLength(nullable))  // Throws a compiler error
+}
+
+length is a property of the String class that contains the number of characters within a string.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,50 @@
+To safely access properties of an object that might contain a null value, use the safe call operator ?.. 
+The safe call operator returns null if the object's property is null. This is useful if you want to avoid the presence of null values triggering errors in your code.
+
+In the following example, the lengthString() function uses a safe call to return either the length of the string or null:
+
+fun lengthString(maybeString: String?): Int? = maybeString?.length
+
+fun main() { 
+    var nullString: String? = null
+    println(lengthString(nullString))
+    // null
+}
+
+Safe calls can be chained so that if any property of an object contains a null value, then null is returned without an error being thrown. For example:
+
+person.company?.address?.country
+
+The safe call operator can also be used to safely call an extension or member function. 
+In this case, a null check is performed before the function is called. If the check detects a null value, then the call is skipped and null is returned.
+
+In the following example, nullString is null so the invocation of .uppercase() is skipped and null is returned:
+
+fun main() {
+    var nullString: String? = null
+    println(nullString?.uppercase())
+    // null
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

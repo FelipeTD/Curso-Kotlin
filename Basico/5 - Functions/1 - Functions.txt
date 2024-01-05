@@ -1,0 +1,75 @@
+You can declare your own functions in Kotlin using the fun keyword.
+
+fun hello() {
+    return println("Hello, world!")
+}
+
+fun main() {
+    hello()
+    // Hello, world!
+}
+
+In Kotlin:
+
+function parameters are written within parentheses ().
+
+each parameter must have a type, and multiple parameters must be separated by commas ,.
+
+the return type is written after the function's parentheses (), separated by a colon :.
+
+the body of a function is written within curly braces {}.
+
+the return keyword is used to exit or return something from a function.
+
+If a function doesn't return anything useful, the return type and return keyword can be omitted. 
+Learn more about this in Functions without return.
+
+In the following example:
+
+x and y are function parameters.
+
+x and y have type Int.
+
+the function's return type is Int.
+
+the function returns a sum of x and y when called.
+
+fun sum(x: Int, y: Int): Int {
+    return x + y
+}
+
+fun main() {
+    println(sum(1, 2))
+    // 3
+}
+
+We recommend in our coding conventions that you name functions starting with a lowercase letter and use camel case with no underscores.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
